@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_ab_event
+    columns:
+      - name: patient_id
+        tests: [not_null]
+      - name: event_name
+        tests: [not_null]
+      - name: group
+        quote: true
+        tests:
+          - accepted_values:
+              values: ["Test", "Control"]
+
+  - name: stg_app_profile
+    columns:
+      - name: patient_id
+        tests: [not_null]
+      - name: traffic_source
+        tests:
+          - accepted_values:
+              values: ["Apple Ads","Google Ads","Meta Ads","Organic Search","Direct","Referral"]
+
+  - name: stg_appointment
+    columns:
+      - name: patient_id
+        tests: [not_null]
+      - name: appointment_status
+        tests:
+          - accepted_values:
+              values: ["Attended","Not Attended"]
+      - name: appointment_date
+        tests:
+          - not_null

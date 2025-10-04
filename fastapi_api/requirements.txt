@@ -1,0 +1,24 @@
+# Core API
+fastapi
+uvicorn[standard]
+SQLAlchemy>=2.0
+psycopg[binary]
+pydantic>=2
+pydantic-settings
+python-dotenv
+
+# Observability & Monitoring
+prometheus-fastapi-instrumentator
+structlog
+
+# Rate Limiting
+slowapi
+
+# Data Transformation
+dbt-core
+dbt-postgres
+
+# Testing
+pytest
+httpx
+jsonschema
