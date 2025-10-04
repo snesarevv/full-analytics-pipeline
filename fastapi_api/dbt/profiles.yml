@@ -1,0 +1,11 @@
+analytics_api:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: db  # Use 'db' for Docker, 'localhost' for local development
+      user: app
+      password: app
+      dbname: appdb
+      port: 5432
+      schema: public
